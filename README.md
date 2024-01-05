@@ -1,3 +1,3 @@
-# Arduino Class Courseware
+# Kinetic Systems Class Courseware
 
 
