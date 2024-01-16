@@ -19,7 +19,7 @@ jobs:
       - run: echo $PWD
       - run: ls -al ./
       - run: ls -al ../
-      - run: pdflatex -jobname=keywordsList-${{  github.ref_name }} kinetic.tex
+      - run: pdflatex -jobname=kinetic-${{  github.ref_name }} kinetic.tex
       - run: ls -al .
       - name: release
         uses: actions/create-release@v1
