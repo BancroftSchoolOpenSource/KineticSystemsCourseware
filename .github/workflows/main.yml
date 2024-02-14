@@ -19,6 +19,7 @@ jobs:
       - run: echo $PWD
       - run: ls -al ./
       - run: ls -al ../
+      - run: sed -i 's/VERSIONNUMBER/${{  github.ref_name }}/g' kinetic.tex
       - run: pdflatex -jobname=kinetic-${{  github.ref_name }} kinetic.tex
       - run: ls -al .
       - name: release
