@@ -11,6 +11,16 @@
 	pdftitle={Overleaf Example},
 	pdfpagemode=FullScreen,
 }
+\usepackage{graphicx}
+\usepackage[margin=0.75in,headsep=.2in]{geometry}
+
+
+\usepackage[svgnames,table]{xcolor}
+\usepackage[tableposition=above]{caption}
+\usepackage{pifont}
+
+\newcommand*\CHECK{\ding{51}}
+
 \begin{document}
 	
 {\huge \textbf{Kinetic Systems Class VERSIONNUMBER}}
@@ -179,6 +189,23 @@
 	\item Print and verify new head works with SmallKat
 \end{todolist}
 
+\newpage
 
+\leftline{\includegraphics[scale=0.5]{robotarm.jpeg} }
+
+\begin{table}
+	\caption{Write the D-H parameters for this robot}
+	\rowcolors{1}{}{gray!7}
+	\begin{tabular}[t]{lccccccc}
+		Link & Theta & D 	  & Radius & Alpha \\ 
+		S 	 & 	     &        &        &       \\	
+		L 	 & 	     &        &        &       \\	
+		U 	 & 	     &        &        &       \\	
+		R 	 & 	     &        &        &       \\	
+		B 	 & 	     &        &        &       \\	
+		T 	 & 	     &        &        &       \\	
+	\end{tabular}
+\end{table}
+\newpage
 
 \end{document}
