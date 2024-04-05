@@ -171,13 +171,40 @@
 	\item Validate IK using KinematicsTest.groovy
 \end{todolist}
 
-\section{Kinematics Solving}
+\section{Connect BowlerStudio robot to Arduino}
 \begin{todolist}
-	\item Inverse kinematics of a 2 dof 
+	\item Intro ESP32 and Arduino
+	\item Into WiFi on microcontrollers
+	\item Intro SimplePacketComs  data structure
+	\item Program Marcos firmware \url{https://github.com/OperationSmallKat/MarcosFirmware}
+	\item Check the serial monitor for the AP (each robot will be different)
+	\item for each link: Change the "type" to "hidfast"
+	\item for each link: Change the "device name" to "midnight" 
+	\item Change link 0 device index to 0
+	\item Plug the link 0 servo into ESp32 pin 23
+	\item Change link 1 device index to 1
+	\item Plug the link 1 servo into ESp32 pin 32
+	\item Publish changes and disconnect the robot in device manager	
+	\item Open BowlerStudio 
+	\item Connect Wifi of laptop to the ESP32's AP
+	\item Connect to the robot using the device manager
+	\item Observe that BowlerStudio found the ESP32 at 192.168.4.1
+	\item Observe that when you move a link in BowlerStudio, the link in reality moves the same way
 \end{todolist}
 
-
-
+\section{Calibrate Your robot}
+\begin{todolist}
+	\item Use the angle sensor the measure the range of the servo
+	\item Record the range of the control signal
+	\item Calculate the real scale factor for the servo
+	\item Disconnect your robot, connect to Bancroft wifi
+	\item connect using the simulator and enter the scale changes
+	\item Publish the scale changes and disconnect
+	\item Connect to your esp32 AP and connect the new configuration
+	\item Use angle sensor to verify range is correct to the control signal
+	\item Put a pencil in the tip of the robot and clamp the base with a paper underneath
+	\item Run TestKinematics.groovy and observe the robot draws a straight line
+\end{todolist}
 
 
 \newpage
